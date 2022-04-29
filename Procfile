@@ -1,1 +1,1 @@
-web: pnpm start:dev
+web: pnpm build && pnpm start
