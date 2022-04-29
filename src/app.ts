@@ -7,18 +7,6 @@ const fastify = createFastify({ logger: true })
 void fastify.register(cors)
 void fastify.register(signInWithEthereum())
 
-fastify.get(
-  '/',
-  {},
-  async function handler(
-    this: FastifyInstance,
-    req: FastifyRequest,
-    reply,
-  ) {
-    void reply.send('fastify-siwe-backend')
-  },
-)
-
 fastify.post(
   '/siwe/init',
   {},
