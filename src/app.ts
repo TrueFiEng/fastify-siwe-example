@@ -15,7 +15,10 @@ fastify.post(
     req: FastifyRequest,
     reply,
   ) {
-    void reply.send({
+    void reply
+    .code(200)
+    .header('Content-Type', 'application/json; charset=utf-8')
+    .send({
       nonce: await req.siwe.generateNonce(),
     })
   },
@@ -34,7 +37,9 @@ fastify.get(
       return
     }
 
-    void reply.code(200).send({
+    void reply.code(200)
+    .header('Content-Type', 'application/json; charset=utf-8')
+    .send({
       loggedIn: true,
       message: req.siwe.session,
     })
