@@ -8,7 +8,8 @@
         "skipLibCheck": true,
         "moduleResolution": "node",
         "esModuleInterop": true,
-        "forceConsistentCasingInFileNames": true
+        "forceConsistentCasingInFileNames": true,
+        "lib": ["es2018", "dom"]
     },
     "include": [
         "./src",
